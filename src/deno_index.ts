@@ -1,4 +1,4 @@
-import { handleRequest } from "./handle_request.js";
+ import { handleRequest } from "./handle_request.js";
 
 async function denoHandleRequest(req: Request): Promise<Response> {
   const url = new URL(req.url);
@@ -6,4 +6,4 @@ async function denoHandleRequest(req: Request): Promise<Response> {
   return handleRequest(req);
 };
 
-Deno.serve({ port: 80 },denoHandleRequest); 
+Deno.serve(denoHandleRequest); 
